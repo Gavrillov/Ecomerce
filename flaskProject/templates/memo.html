@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="./static/styles.css" media="screen">
+    <title>Памятка сотрудникам</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="button-list">
+                <li><a href="/" class="button">Выход</a></li>
+                <li><a href="/complete_order" class="button">Выполненые заказы</a></li>
+                <li><a href="/memo" class="button">Памятка новым сотрудникам</a></li>
+                <li><a href="/managerdashboard" class="button">Панель менеджера</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Памятка</h1>
+    <body>
+        <div>
+            {{ content | safe }}
+        </div>
+    </body>
+</body>
+</html>

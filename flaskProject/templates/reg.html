@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вход</title>
+    <link rel="stylesheet" href="./static/styles_reg.css" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function validateForm() {
+            const username = document.getElementById("username");
+            const password = document.getElementById("password");
+
+            if (username.value.trim() === "" || password.value.trim() === "") {
+                if (username.value.trim() === "") {
+                    username.style.borderColor = "red";
+                } else {
+                    username.style.borderColor = "initial";
+                }
+
+                if (password.value.trim() === "") {
+                    password.style.borderColor = "red";
+                } else {
+                    password.style.borderColor = "initial";
+                }
+
+                alert("Пожалуйста, заполните все поля.");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Форма входа</h1>
+    <form method="post" onsubmit="return validateForm()">
+        <label for="username">Имя пользователя:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Пароль:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <input type="submit" value="Войти">
+    </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="./static/err404.css" media="screen">
+<div class="inner">
+
+	<div class="kirin"></div>
+
+	<svg id="wave" viewBox="0 0 746 300">
+
+						<defs>
+							<path id="curve" d="M.35 56.81c53.28 0 53.28 22 106.57 11s53.28-11 106.57-11 53.28 11 106.57 11 53.28-11 106.56-11 53.29 11 106.58 11 53.28-11 106.57-11 53.29 11 106.58 11" />
+						</defs>
+
+						<text id="desc" x="55%" text-anchor="middle" transform="translate(0, 0)">
+							<textPath xlink:href="#curve">
+								Ошибка авторизации
+							</textPath>
+						</text>
+
+						<text id="number" x="50%" text-anchor="middle" transform="translate(0, 140)">
+							<textPath xlink:href="#curve">
+								404
+							</textPath>
+						</text>
+
+					</svg>
+
+	<div class="wave-background">
+		<div class="back"></div>
+		<div class="middle"></div>
+		<div class="front"></div>
+	</div>
+
+</div>
+<script>
+    TweenMax.fromTo('textPath', 3, {attr: {startOffset: '0'}}, {attr: {startOffset: '28.8%'}, ease: Linear.easeNone, repeat: -1});
+	TweenMax.to('svg', 3, {x: '-28.8%', ease: Linear.easeNone, repeat: -1});
+
+</script>
